@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+
+  pymocserver:
+    image: python:3.10.4-slim
+    container_name: pymocserver
+    hostname: pymocserver.localhost.com
+    ports:
+      - "8000:8000"
+    restart: always
+    environment:
+      HTTP_PROXY: ""
+      HTTPS_PROXY: ""
+      http_proxy: ""
+      https_proxy: ""
+      no_proxy: "127.0.0.1,localhost,*.localhost.com"
+      PYMOC_OAUTH2PROXY_COOKIE_SECRET: "1234567890123456"
+    command:
+      [
+        'python3',
+        '/opt/pymoc_server.py',
+      ]
+    networks:
+      pymocserver: {}
+    volumes:
+      - ./pymocserver/pymoc_server.py:/opt/pymoc_server.py
+      - ./decode_session_state/decodess.so:/opt/decodess.so
+      - ./decode_session_state/decodess.h:/opt/decodess.h
+
+  keycloak:
+    image: jboss/keycloak:16.1.1
+    container_name: keycloak
+    hostname: keycloak.localhost.com
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    restart: always
+    environment:
+      HTTP_PROXY: ""
+      HTTPS_PROXY: ""
+      http_proxy: ""
+      https_proxy: ""
+      no_proxy: "127.0.0.1,localhost,*.localhost.com"
+    command:
+      [
+        '-b',
+        '0.0.0.0',
+        '-Djboss.socket.binding.port-offset=0',
+        '-Dkeycloak.migration.action=import',
+        '-Dkeycloak.migration.provider=dir',
+        '-Dkeycloak.migration.dir=/opt/keycloak/realm-config',
+        '-Dkeycloak.migration.strategy=IGNORE_EXISTING',
+      ]
+    networks:
+      keycloak: {}
+    volumes:
+      - ./keycloak/realm-config:/opt/keycloak/realm-config
+      - ./keycloak/x509:/etc/x509/https:ro
+
+  oauth2proxy:
+    image: centos:7.9.2009
+    container_name: oauth2proxy
+    hostname: oauth2proxy.localhost.com
+    ports:
+      - "4180:4180"
+    restart: always
+    environment:
+      HTTP_PROXY: ""
+      HTTPS_PROXY: ""
+      http_proxy: ""
+      https_proxy: ""
+      no_proxy: "127.0.0.1,localhost,*.localhost.com"
+    command:
+      [
+        '/opt/oauth2proxy/src/oauth2-proxy',
+        '--config=/opt/oauth2proxy/oauth2-proxy.cfg',
+      ]
+    networks:
+      pymocserver: {}
+      keycloak: {}
+      oauth2proxy: {}
+    volumes:
+      - ./oauth2proxy/oauth2-proxy.cfg:/opt/oauth2proxy/oauth2-proxy.cfg
+      - ./oauth2proxy/src/:/opt/oauth2proxy/src/
+      - ./oauth2proxy/log:/opt/oauth2proxy/log
+      - ./oauth2proxy/basic/:/opt/oauth2proxy/basic/:ro
+      - ./oauth2proxy/x509:/opt/oauth2proxy/x509:ro
+
+networks:
+  pymocserver: {}
+  keycloak: {}
+  oauth2proxy: {}
+
+

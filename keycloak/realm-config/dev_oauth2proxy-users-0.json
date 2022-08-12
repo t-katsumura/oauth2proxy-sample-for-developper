@@ -1,0 +1,136 @@
+{
+  "realm" : "dev_oauth2proxy",
+  "users" : [ {
+    "id" : "1eb82f01-c9cd-4b9b-8989-31b6082dee2e",
+    "createdTimestamp" : 1648245947319,
+    "username" : "user1",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "u1First",
+    "lastName" : "u1Last",
+    "email" : "user1@example.com",
+    "credentials" : [ {
+      "id" : "c90c13b0-5dc0-457a-a831-7fa85f3f2672",
+      "type" : "password",
+      "createdDate" : 1648254084057,
+      "secretData" : "{\"value\":\"9GEi+E78A2NDy6QX9l9c6Aw+sBJ9Ahkoi+MN2Lf9DhJ5VyCbZ6OHTqxRRDHXQgyx33lbYVakvFmmHfLNcvaYuQ==\",\"salt\":\"i1afLHJNG6OQGo9ZlENTpQ==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-dev_oauth2proxy" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "02ba08c9-6083-4c15-ae71-17b28b254433",
+    "createdTimestamp" : 1648246014991,
+    "username" : "user2",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "u2First",
+    "lastName" : "u2Last",
+    "email" : "user2@example.com",
+    "credentials" : [ {
+      "id" : "290b9e5e-4941-410d-8cb8-548b467585e2",
+      "type" : "password",
+      "createdDate" : 1648254103468,
+      "secretData" : "{\"value\":\"D+CkJLFtD0RFTovqPfwB6XWhoRT3Z3LEyCvQiips53NRpJX9sGNk1EYAnsC7NROVOWE8iHZjXOOMdg9LAcVOmg==\",\"salt\":\"rEl7n5+Zt7wMuzs+UjRYfA==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-dev_oauth2proxy" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "17783c92-001f-4f65-b3f3-fbf2942f56d1",
+    "createdTimestamp" : 1648246055327,
+    "username" : "user3",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "u3First",
+    "lastName" : "u3Last",
+    "email" : "user3@example.com",
+    "credentials" : [ {
+      "id" : "f848d6f3-c76d-451d-b9f4-7493f71e16cf",
+      "type" : "password",
+      "createdDate" : 1648254121646,
+      "secretData" : "{\"value\":\"KI92KyyaKqvDnrZ2fJ5FKOG9Q4xq3DpmZG774VSZxcqsL2SiJJ+nieIGNFjjuNgPJsZRDsrCdyPQvd9nhK7tPw==\",\"salt\":\"gN2fkfH4Ui60bAhUWjQJQA==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-dev_oauth2proxy" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "62fb2453-3b1f-46f4-a95d-211f134a013c",
+    "createdTimestamp" : 1660289723127,
+    "username" : "user4",
+    "enabled" : false,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "u4First",
+    "lastName" : "u4Last",
+    "email" : "user4@example.com",
+    "credentials" : [ {
+      "id" : "cb04b6ac-8f38-4601-af48-bb87419c99a1",
+      "type" : "password",
+      "createdDate" : 1660289739143,
+      "secretData" : "{\"value\":\"DSs25QXFBIHcgYZ7Sg9FOsI3UTh9XDOJTN3/GcktgFXCriLivpSGKe3YeG3CBxU+wq1dWfBhcoTqrbGsbav83g==\",\"salt\":\"jn7Vx/1/qb7P98JNgzhjsw==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-dev_oauth2proxy" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "f34d27cc-27e9-4e11-9d2f-0d4ed52eaf20",
+    "createdTimestamp" : 1660289781652,
+    "username" : "user5",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "u5First",
+    "lastName" : "u5Last",
+    "email" : "user5@example.com",
+    "credentials" : [ {
+      "id" : "13019adf-dc7a-45df-a14e-ced5cebdb93d",
+      "type" : "password",
+      "createdDate" : 1660289802757,
+      "secretData" : "{\"value\":\"CiDu2BaXWDfqkd1Hzubf+uERTp0eR0b29yhKCxH0Y4DeUNRXLJgVElJbgbbn8wo+GE/pRf+7A0csS/aDlHGw7g==\",\"salt\":\"pQElK9FB8r8Dvd1P7zTxPw==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-dev_oauth2proxy" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "084b8072-4700-4675-8cdf-ab03c749a542",
+    "createdTimestamp" : 1660289829097,
+    "username" : "user6",
+    "enabled" : false,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "u6First",
+    "lastName" : "u6Last",
+    "email" : "user6@example.com",
+    "credentials" : [ {
+      "id" : "bf44b2a7-ddb7-4123-ace5-9927086af027",
+      "type" : "password",
+      "createdDate" : 1660289838934,
+      "secretData" : "{\"value\":\"0NNxlSih5gPv1DwmLIPHz8AbkH8dwEeaRfSQamWaOsLXrDw4qusV5QzipkLkqxbeemsxtFaiCJqpPYlpNcJI7A==\",\"salt\":\"2v9MwVRhVZJdnE3RgK6fbw==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-dev_oauth2proxy" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}

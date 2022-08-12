@@ -1,0 +1,7 @@
+
+
+oauth2proxy/log/*
+!oauth2proxy/log/.gitkeep
+
+oauth2proxy/src/*
+!oauth2proxy/src/.gitkeep
