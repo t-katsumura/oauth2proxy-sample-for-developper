@@ -42,7 +42,8 @@ docker-compsoe restart oauth2proxy
 ### 4. access moc application
 
 Endpoints are described at [endpoints](https://oauth2-proxy.github.io/oauth2-proxy/docs/features/endpoints).  
-Sign in endpoint is [http://oauth2proxy.localhost.com:4180/oauth2/sign_in](http://oauth2proxy.localhost.com:4180/oauth2/sign_in) for this application.   
+Access [http://oauth2proxy.localhost.com:4180/oauth2/sign_in](http://oauth2proxy.localhost.com:4180/oauth2/sign_in) 
+and sigin in to the python moc server using `user1` ~ `user6`. 
 
 | URL                                   | Description        |
 | ------------------------------------- | ------------------ |
@@ -53,20 +54,21 @@ Sign in endpoint is [http://oauth2proxy.localhost.com:4180/oauth2/sign_in](http:
 Useres are created in the keycloak in advance.  
 `admin` user is used to sign in the keycloak console and others are python moc server.  
 
-| Realm           | Username | Password | Email             | First Name | Last Name | User Enabled | Email Verified |
-| --------------- | -------- | -------- | ----------------- | ---------- | --------- | ------------ | -------------- |
-| master          | admin    | password | admin@example.com | adminFirst | adminLast | true         | true           |
-| dev_oauth2proxy | user1    | password | user1@example.com | u1First    | u1Last    | true         | true           |
-| dev_oauth2proxy | user2    | password | user2@example.com | u2First    | u2Last    | true         | true           |
-| dev_oauth2proxy | user3    | password | user3@example.com | u3First    | u3Last    | true         | true           |
-| dev_oauth2proxy | user4    | password | user4@example.com | u4First    | u4Last    | false        | true           |
-| dev_oauth2proxy | user5    | password | user5@example.com | u5First    | u5Last    | true         | false          |
-| dev_oauth2proxy | user6    | password | user6@example.com | u6First    | u6Last    | false        | false          |
+| Username | Password | Email             | First Name | Last Name | User Enabled | Email Verified |
+| -------- | -------- | ----------------- | ---------- | --------- | ------------ | -------------- |
+| admin    | password | admin@example.com | adminFirst | adminLast | true         | true           |
+| user1    | password | user1@example.com | u1First    | u1Last    | true         | true           |
+| user2    | password | user2@example.com | u2First    | u2Last    | true         | true           |
+| user3    | password | user3@example.com | u3First    | u3Last    | true         | true           |
+| user4    | password | user4@example.com | u4First    | u4Last    | false        | true           |
+| user5    | password | user5@example.com | u5First    | u5Last    | true         | false          |
+| user6    | password | user6@example.com | u6First    | u6Last    | false        | false          |
 
 ## Client info
 
 oauth2-proxy is configured in the keycloak as  
 
+- Realm          : `dev_oauth2proxy`
 - Client ID      : `oauth2proxy`  
 - Client Secret  : `r4jwmwLU4GEsf53TnGkqJWfNtAdwWhqU`  
 - well-known URL : http://keycloak.localhost.com:8080/auth/realms/dev_oauth2proxy/.well-known/openid-configuration
