@@ -41,11 +41,11 @@ To restart a particular container
 docker-compsoe restart oauth2proxy
 ```
 
-### 4. access moc application
+### 4. sign in to moc server
 
-Endpoints are described at [endpoints](https://oauth2-proxy.github.io/oauth2-proxy/docs/features/endpoints).  
-Access [http://oauth2proxy.localhost.com:4180/oauth2/sign_in](http://oauth2proxy.localhost.com:4180/oauth2/sign_in) 
-and sigin in to the python moc server using `user1` ~ `user6`. 
+Endpoints are described in [endpoints](https://oauth2-proxy.github.io/oauth2-proxy/docs/features/endpoints).  
+Moc server can be signed in by accessing [http://oauth2proxy.localhost.com:4180/oauth2/sign_in](http://oauth2proxy.localhost.com:4180/oauth2/sign_in) 
+with using `user1` to `user6`. 
 
 | URL                                   | Description        |
 | ------------------------------------- | ------------------ |
