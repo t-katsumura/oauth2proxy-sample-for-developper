@@ -1,6 +1,8 @@
 # oauth2proxy-sample-for-developper
 A simple oauth2-proxy sample project using keycloak and python moc application
 
+![overview](/docs/overview.png)
+
 ## Run application
 
 ### 1. deploy oauth2-proxy
@@ -64,9 +66,14 @@ Useres are created in the keycloak in advance.
 | user5    | password | user5@example.com | u5First    | u5Last    | true         | false          |
 | user6    | password | user6@example.com | u6First    | u6Last    | false        | false          |
 
-## Client info
 
-oauth2-proxy is configured in the keycloak as  
+## oauth2-proxy configuration
+
+In this sample application, `oauth2proxy/oauth2-proxy.cfg` is used for configureing the oauth2-proxy.
+
+## Client information
+
+oauth2-proxy is configured in the keycloak with  
 
 - Realm          : `dev_oauth2proxy`
 - Client ID      : `oauth2proxy`  
@@ -75,7 +82,9 @@ oauth2-proxy is configured in the keycloak as
 
 ## Build oauth2-proxy from source code
 
-**go command**
+**go build command**
+
+Build oauth2-proxy with `go build` command.
 
 ```
 go build
@@ -83,9 +92,9 @@ go build
 
 **Makefile**
 
-Building oauth2-proxy using a Makefile requires installation of  gcc, make in addition of golang.  
+Building oauth2-proxy using a Makefile requires installation of  gcc, make in addition to golang.  
 Here shows how to build oauth2-proxy using docker container.  
-Source codes shoud be in the [oauth2proxy/src/](oauth2proxy/src/) folder.  
+Source codes should be in the [oauth2proxy/src/](oauth2proxy/src/) folder.  
 
 ```
 docker run -it --rm -v ${PWD}/oauth2proxy/src:/go/src golang:1.18.0 bash -c "cd /go/src && make build"
